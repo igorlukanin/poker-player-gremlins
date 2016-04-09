@@ -22,4 +22,8 @@ function test(){
     ]));
 }
 
+module.exports = {
+    convertCard:convertCard,
+    convertHand:convertHand 
+}
 // test();

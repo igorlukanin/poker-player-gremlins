@@ -35,6 +35,8 @@ app.get('/state', function(req, res) {
   player.getState(res);
 });
 
+app.use(express.static('./'));
+
 port = parseInt(process.env['PORT'] || 1337);
 host = "0.0.0.0";
 app.listen(port, host);

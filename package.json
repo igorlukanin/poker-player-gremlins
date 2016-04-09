@@ -5,7 +5,8 @@
   "private": true,
   "dependencies": {
     "brain": "^0.7.0",
-    "express": "3.x"
+    "express": "3.x",
+    "glob": "^7.0.3"
   },
   "devDependencies": {
     "eslint": "^2.7.0",

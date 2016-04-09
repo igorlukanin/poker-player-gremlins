@@ -29,9 +29,8 @@ app.get('/net', function(req, res) {
   res.send(200, JSON.stringify(require('os').networkInterfaces()));
 });
 
-app.get('/ping', function(req, res) {
-  var data = player.getData();
-  res.json(data);
+app.get('/state', function(req, res) {
+  player.getState(res);
 });
 
 port = parseInt(process.env['PORT'] || 1337);

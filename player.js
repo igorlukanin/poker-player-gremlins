@@ -1,6 +1,6 @@
 var Cards = require("./Cards.js");
 var Better = require("./Better.js");
-var saveState = require("./lib/saveState");
+var state = require('./lib/saveState');
 
 module.exports = {
 
@@ -13,6 +13,8 @@ module.exports = {
   },
 
   showdown: function(game_state) {
-    saveState(game_state);
-  }
+    state.saveState(game_state);
+  },
+
+  getState: state.loadState
 };

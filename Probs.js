@@ -178,12 +178,13 @@ var tt = [
 function getProb(aliveCount, cards){
     var r1 = cards[0].rank == "10" ? "T" : cards[0].rank;
     var r2 = cards[1].rank == "10" ? "T" : cards[1].rank;
-    var key = ""+r1+r2;
+    var rr1 = Cards.rankIndex(cards[0].rank); 
+    var rr2 = Cards.rankIndex(cards[1].rank); 
+    var key = rr1 > rr2 ? ""+r1+r2 : ("" + r2+r1);
     if (cards[0].suit == cards[1].suit) key += "s";
-    var row = tt.filter(row => row[0] == key)
-    console.log("KEY    [" + JSON.stringify(row) + "]");
+    console.log("K" + key);
+    var row = tt.filter(row => row[0] == key)[0];
     return row[aliveCount-1];
-    
 }
 
 module.exports = {

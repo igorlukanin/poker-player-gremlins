@@ -1,4 +1,5 @@
 var Cards = require("./Cards.js");
+var Probs = require("./Probs.js");
 
 // hand as in game state
 var getBorder = function(state) {
@@ -22,8 +23,13 @@ var getBorder = function(state) {
 var getBet = function(state) {
     var me = state.players[state.in_action];
     var hand = me.hole_cards;
-    var score = Cards.getHandScore(hand);
-    return score > getBorder(state) ? 10000 : 0;
+    var aliveCount = state.players.filter(p => p.state != "out").length;
+    var p = Probs.getProb(aliveCount, hand) / 100;
+    console.log(p + " * " + state.pot);
+    var amount = p * state.pot;
+    return amount;
+    // var score = Cards.getHandScore(hand);
+    // return score > getBorder(state) ? 10000 : 0;
 };
 
 module.exports = {

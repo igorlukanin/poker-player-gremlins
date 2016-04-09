@@ -13,17 +13,17 @@ describe('Cards', () => {
   });
 });
 
-// describe('Probs', () => {
-//   it('AAs', () => {
-//       var score = Probs.getProb(2, cards.parseCards("As As"));
-//       assert.equal(85.3, score);
-//   });
-//   it('AT', () => {
-//       var score = Probs.getProb(2, cards.parseCards("As Th"));
-//       assert.equal(62.9, score);
-//   });
-//   it('AT * 10', () => {
-//       var score = Probs.getProb(2, cards.parseCards("As Th"));
-//       assert.equal(13.4, score);
-//   });
-// });
+describe('Probs', () => {
+  it('AA', () => {
+      var score = Probs.getProb(2, cards.parseCards("As Ah"));
+      assert.equal(85.3, score);
+  });
+  it('AT', () => {
+      var score = Probs.getProb(2, cards.parseCards("As Th"));
+      assert.equal(62.9, score);
+  });
+  it('AT * 10', () => {
+      var score = Probs.getProb(10, cards.parseCards("As Th"));
+      assert.equal(13.4, score);
+  });
+});

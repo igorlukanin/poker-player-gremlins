@@ -84,6 +84,7 @@ function rankIndex(rank){
 module.exports = {
     getHandScore:getHandScore,
     parseCard:parseCard,
-    parseCards:parseCards
+    parseCards:parseCards,
+    rankIndex:rankIndex
 }
 // test();

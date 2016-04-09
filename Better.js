@@ -13,7 +13,7 @@ var getBorder = function(state) {
 
     
     var myBigBlind = (state.dealer + 2) % (state.players.length) == state.in_action;
-    if (myBigBlind && state.pot == state.small_blind * 3) return 0;
+    //if (myBigBlind && state.pot == state.small_blind * 3) return 0;
 
     var careful = buy_in >= myStack / 2;
     return careful ? 25 : 23;

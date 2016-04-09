@@ -9,8 +9,4 @@ describe('Cards', () => {
       var score = cards.getHandScore([{rank:'Q', suit:'spades'}, {rank:'K', suit:'spades'}]);
       assert.equal(34, score);
   });
-//   it('should getBorder', () => {
-//       var score = cards.getBorder(cards.parseCards("Qs Ks"));
-//       assert.equal(34, score);
-//   });
 });

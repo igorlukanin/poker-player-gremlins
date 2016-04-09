@@ -11,7 +11,7 @@ var getBorder = function(state){
   if (myStack / 2 / state.small_blind <= 3) return 0;
   
   var myBlind = (state.dealer+2)%(state.players.length) == state.in_action;
-  if (myBlind) return 0; 
+  if (myBlind && state.pot == state.small_blind*3) return 0; 
   
   var border = 27;
   

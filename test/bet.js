@@ -1,7 +1,7 @@
 const assert = require('assert');
 const p = require('../player.js');
 const Cards = require('../Cards.js');
-
+const cards = require('../Better.js');
 
 const communityCards = Cards.parseCards("4s Ah 6c");
     
@@ -42,7 +42,7 @@ const state = {
     "bet_index":0,                                  
     "small_blind": 10,                              
     "current_buy_in": 320,                          
-    "pot": 400,                                     
+    "pot": 30,                                     
     "minimum_raise": 240,                           
     "dealer": 1,                                    
     "orbits": 7,                                    
@@ -60,5 +60,15 @@ describe('player', () => {
         console.log(JSON.stringify(me.hole_cards));
         assert.equal(b, 0)  
     })
+  });
+});
+
+describe('Better', () => {
+  it('should allin on blind', () => {
+      var s = state;
+      s.dealer = 2;
+      s.players[s.in_action].hole_cards = Cards.parseCards("2s 3d");
+      var score = cards.getBorder(s);
+      assert.equal(0, score);
   });
 });

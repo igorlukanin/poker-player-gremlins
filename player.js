@@ -5,7 +5,7 @@ var saveState = state.saveState;
 
 module.exports = {
 
-  VERSION: "Nash",
+  VERSION: "Before Nash",
 
   bet_request: function(state, bet) {
     saveState(state, 'rounds');

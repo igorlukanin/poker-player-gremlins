@@ -67,11 +67,11 @@ describe('Better on blind', () => {
     var s = state;
     s.dealer = 2;
     s.players[s.in_action].hole_cards = Cards.parseCards("2s 3d");
-    it('should allin if no pot', () => {
-        s.pot = s.small_blind * 3;
-        var score = cards.getBorder(s);
-        assert.equal(6*s.small_blind, score);
-    });
+    // it('should allin if no pot', () => {
+    //     s.pot = s.small_blind * 3;
+    //     var score = cards.getBorder(s);
+    //     assert.equal(6*s.small_blind, score);
+    // });
     it('should fold if large pot', () => {
         s.pot = s.small_blind * 4;
         s.buy_in = s.small_blind * 2;

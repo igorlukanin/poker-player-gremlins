@@ -18,7 +18,7 @@ var getBet = function(state) {
         return 0;
   }
   else if(aliveCount == 4) {
-    if (score > 23) {
+    if (score > 20) {
         console.log("allin 2");
         return 1000000;
     }

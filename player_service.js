@@ -20,9 +20,13 @@ app.post('/', function(req, res){
   } else if(req.body.action == 'version') {
     res.send(200, player.VERSION);
   } else {
-    res.send(200, 'OK')
+    res.send(200, 'OK');
   }
 
+});
+
+app.get('/ping', function(req, res) {
+  res.send(200, 'pong');
 });
 
 port = parseInt(process.env['PORT'] || 1337);

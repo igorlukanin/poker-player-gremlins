@@ -7,6 +7,6 @@ describe('Cards', () => {
   });
   it('should rank Qs Ks', () => {
       var score = cards.getHandScore([{rank:'Q', suit:'spades'}, {rank:'K', suit:'spades'}]);
-      assert.equal(31, score);
+      assert.equal(34, score);
   });
 });

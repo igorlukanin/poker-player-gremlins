@@ -12,6 +12,8 @@ function getHandScore(hand){
     var score = scoreRank(c1.rank) + scoreRank(c2.rank);
     if (c1.rank == c2.rank)
         score += 10;
+    if (c1.suit == c2.suit)
+        score += 4;
     var diff = rankIndex(c1.rank)-rankIndex(c2.rank); 
     if (diff == 1 || diff == -1)
         score += 3;

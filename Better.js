@@ -10,7 +10,7 @@ var getBet = function(state) {
   var aliveCount = state.players.filter(p => p.state != "out").length;
   console.log("alive count " + aliveCount);
   if (aliveCount > 4){
-    if (score > 32) {
+    if (score > 27) {
         console.log("allin");
         return 1000000;
     }

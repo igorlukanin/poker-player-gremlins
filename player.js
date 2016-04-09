@@ -1,3 +1,4 @@
+const saveState = require('./lib/saveState');
 
 module.exports = {
 
@@ -11,6 +12,6 @@ module.exports = {
   },
 
   showdown: function(game_state) {
-
+    saveState(game_state);
   }
 };

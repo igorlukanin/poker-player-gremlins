@@ -1,9 +1,9 @@
 const mongo = require('../lib/mongo');
 
 mongo.then(db => {
-  const collection = db.collection('state');
+  const collection = db.collection('states');
 
-  return collection.find({}).toArray().then(states => {
+  return collection.find({}).limit(10).toArray().then(states => {
     console.log(states);
 
     process.exit(0);

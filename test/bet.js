@@ -1,28 +1,9 @@
 const assert = require('assert');
 const p = require('../player.js');
-
-function parseCard(c){
-    var r = c.charAt(0);
-    if (r == 'T') r = 10;
-    var ss = {
-        's': 'spades',
-        'd': 'diamonds',
-        'h': 'hearts',
-        'c': 'clubs'
-    }
-    return {
-        rank: r,
-        suit: ss[c.charAt(1)]
-    };
-}
-
-function cards(s){
-    var cs = s.split(' ');
-    return cs.map(c => parseCard(c));
-}
+const Cards = require('../Cards.js');
 
 
-const communityCards = cards("4s Ah 6c");
+const communityCards = Cards.parseCards("4s Ah 6c");
     
 var albert = {                                           
             "id": 0,                                
@@ -39,7 +20,7 @@ var me =  {
             "version": "Default random player",
             "stack": 1590,
             "bet": 80,
-            "hole_cards": cards("2h 3s")
+            "hole_cards": Cards.parseCards("2h 3s")
         };
         
 var chuck = {
@@ -69,6 +50,7 @@ const state = {
     "players": players3,
     "community_cards": communityCards
 };
+
 
 describe('player', () => {
   it('should bet', () => {

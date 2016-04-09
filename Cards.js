@@ -1,3 +1,23 @@
+function parseCard(c){
+    var r = c.charAt(0);
+    if (r == 'T') r = 10;
+    var ss = {
+        's': 'spades',
+        'd': 'diamonds',
+        'h': 'hearts',
+        'c': 'clubs'
+    }
+    return {
+        rank: r,
+        suit: ss[c.charAt(1)]
+    };
+}
+
+function parseCards(s){
+    var cs = s.split(' ');
+    return cs.map(c => parseCard(c));
+}
+
 function convertCard(inCard){
     var rank = inCard.rank == "10" ? "T" : inCard.rank;
     return rank + inCard.suit.charAt(0);   
@@ -63,5 +83,7 @@ function rankIndex(rank){
 
 module.exports = {
     getHandScore:getHandScore,
+    parseCard:parseCard,
+    parseCards:parseCards
 }
 // test();

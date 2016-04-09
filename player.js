@@ -4,7 +4,7 @@ var state = require('./lib/saveState');
 
 module.exports = {
 
-  VERSION: "3",
+  VERSION: "HA!",
 
   bet_request: function(state, bet) {
     // state.saveState(state, 'rounds');

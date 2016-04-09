@@ -58,17 +58,24 @@ describe('player', () => {
     p.bet_request(state, function(b){
         console.log(b);
         console.log(JSON.stringify(me.hole_cards));
-        assert.equal(b, 0)  
+        assert.equal(b, 10000)  
     })
   });
 });
 
-describe('Better', () => {
-  it('should allin on blind', () => {
-      var s = state;
-      s.dealer = 2;
-      s.players[s.in_action].hole_cards = Cards.parseCards("2s 3d");
-      var score = cards.getBorder(s);
-      assert.equal(0, score);
-  });
+describe('Better on blind', () => {
+    var s = state;
+    s.dealer = 2;
+    s.players[s.in_action].hole_cards = Cards.parseCards("2s 3d");
+    it('should allin if no pot', () => {
+        s.pot = s.small_blind * 3;
+        var score = cards.getBorder(s);
+        assert.equal(0, score);
+    });
+    it('should fold if large pot', () => {
+        s.pot = s.small_blind * 4;
+        s.buy_in = s.small_blind * 2;
+        var score = cards.getBorder(s);
+        assert.ok(score!=0);
+    });
 });

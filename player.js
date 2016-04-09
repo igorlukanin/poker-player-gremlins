@@ -4,11 +4,10 @@ var state = require('./lib/saveState');
 
 module.exports = {
 
-  VERSION: "all or nothing",
+  VERSION: "all or nothing (alivecount)",
 
   bet_request: function(state, bet) {
-    var me = state.players[state.in_action];
-    var value = Better.getBet(me.hole_cards, me.stack, state.current_buy_in);
+    var value = Better.getBet(state);
     bet(value);
   },
 

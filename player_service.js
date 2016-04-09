@@ -1,9 +1,11 @@
 var player = require('./player');
 var express = require('express');
+var compression = require('compression');
 var app = express();
 
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(compression());
 
 app.get('/', function(req, res){
   res.send(200, 'OK')

@@ -8,6 +8,8 @@ var getBorder = function(state) {
     var buy_in = state.current_buy_in;
     var aliveCount = state.players.filter(p => p.state != "out").length;
 
+    if (aliveCount == 2)
+        return 15;
 //    if (state.pot == state.small_blind * 3) return 6*state.small_blind;
 
     if (myStack / 2 / state.small_blind <= 3) return 0;

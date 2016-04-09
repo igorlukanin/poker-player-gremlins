@@ -181,6 +181,7 @@ function getProb(aliveCount, cards){
     var key = ""+r1+r2;
     if (cards[0].suit == cards[1].suit) key += "s";
     var row = tt.filter(row => row[0] == key)
+    console.log("KEY    [" + JSON.stringify(row) + "]");
     return row[aliveCount-1];
     
 }

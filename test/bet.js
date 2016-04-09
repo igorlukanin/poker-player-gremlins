@@ -58,7 +58,7 @@ describe('player', () => {
     p.bet_request(state, function(b){
         console.log(b);
         console.log(JSON.stringify(me.hole_cards));
-        assert.equal(b, 10000)  
+        assert.equal(b, 0)  
     })
   });
 });
@@ -70,7 +70,7 @@ describe('Better on blind', () => {
     it('should allin if no pot', () => {
         s.pot = s.small_blind * 3;
         var score = cards.getBorder(s);
-        assert.equal(0, score);
+        assert.equal(6*s.small_blind, score);
     });
     it('should fold if large pot', () => {
         s.pot = s.small_blind * 4;

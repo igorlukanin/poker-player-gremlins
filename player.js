@@ -4,7 +4,7 @@ var state = require('./lib/saveState');
 
 module.exports = {
 
-  VERSION: "v27",
+  VERSION: "v27*",
 
   bet_request: function(state, bet) {
     var value = Better.getBet(state);

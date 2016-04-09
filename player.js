@@ -7,7 +7,7 @@ module.exports = {
   VERSION: "3",
 
   bet_request: function(state, bet) {
-    state.saveState(state, 'rounds');
+    // state.saveState(state, 'rounds');
 
     var value = Better.getBet(state);
     bet(value);

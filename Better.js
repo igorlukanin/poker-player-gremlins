@@ -17,7 +17,7 @@ var getBorder = function(state) {
     //if (myBigBlind && state.pot == state.small_blind * 3) return 0;
 
     var careful = buy_in >= myStack / 2;
-    return careful ? 25 : 23;
+    return careful ? 28 : 24;
 }
 
 var getBet = function(state) {
@@ -25,13 +25,11 @@ var getBet = function(state) {
     var hand = me.hole_cards;
     var aliveCount = state.players.filter(p => p.state != "out").length;
     var score = Cards.getHandScore(hand);
-    return score > getBorder(state) ? 10000 : 0;
-
-
-    // var p = Probs.getProb(aliveCount, hand) / 100;
-    // console.log(p + " * " + state.pot);
-    // var amount = p * state.pot;
-    // return amount;
+    var p = Probs.getProb(aliveCount, hand) / 100;
+    console.log(p + " * " + state.pot);
+    if (score > getBorder(state)) return 10000;
+    if (p > 0.7) return 10000;
+    return 0;
 };
 
 module.exports = {

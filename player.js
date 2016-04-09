@@ -1,3 +1,10 @@
+var PokerEvaluator = require("poker-evaluator");
+
+// hand: an array like ["As", "Ks", "Qs", "Js", "Ts", "3c", "5h"]
+var scoreHand = function(hand) {
+  var result = PokerEvaluator.evalHand(hand);
+  return result.handRank;
+};
 
 module.exports = {
 

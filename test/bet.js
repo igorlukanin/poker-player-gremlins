@@ -59,11 +59,11 @@ const state = {
             "hole_cards": [                         
                                                     
                 {
-                    "rank": "K",                    
+                    "rank": "J",                    
                     "suit": "hearts"                
                 },
                 {
-                    "rank": "K",
+                    "rank": "Q",
                     "suit": "spades"
                 }
             ]

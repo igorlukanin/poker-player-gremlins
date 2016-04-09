@@ -18,7 +18,7 @@ var getBet = function(state) {
         return 0;
   }
   else if(aliveCount > 2) {
-    if (score > 25) {
+    if (score > 23) {
         console.log("allin 2");
         return 1000000;
     }
@@ -26,7 +26,7 @@ var getBet = function(state) {
         return 0;
   }
   else
-    if (score > 17) {
+    if (score > 15) {
         console.log("allin 3");
         return 1000000;
     }

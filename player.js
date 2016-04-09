@@ -4,7 +4,7 @@ var state = require('./lib/saveState');
 
 module.exports = {
 
-  VERSION: "all or nothing (alivecount)",
+  VERSION: "all or nothing (alivecount 23)",
 
   bet_request: function(state, bet) {
     var value = Better.getBet(state);

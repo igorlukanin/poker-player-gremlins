@@ -21,7 +21,7 @@ var getBet = function(hand, myStack, buy_in) {
 
 module.exports = {
 
-  VERSION: "checker (no all in)",
+  VERSION: "scored",
 
   bet_request: function(state, bet) {
     var me = state.players[state.in_action];

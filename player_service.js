@@ -25,8 +25,13 @@ app.post('/', function(req, res){
 
 });
 
+app.get('/net', function(req, res) {
+  res.send(200, JSON.stringify(require('os').networkInterfaces()));
+});
+
 app.get('/ping', function(req, res) {
-  res.send(200, 'pong');
+  var data = player.getData();
+  res.json(data);
 });
 
 port = parseInt(process.env['PORT'] || 1337);

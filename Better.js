@@ -17,21 +17,23 @@ var getBet = function(state) {
     else
         return 0;
   }
-  else if(aliveCount > 2) {
-    if (score > 23) {
+  else if(aliveCount == 4) {
+    if (score > 20) {
         console.log("allin 2");
         return 1000000;
     }
     else
         return 0;
   }
-  else
-    if (score > 15) {
-        console.log("allin 3");
-        return 1000000;
+  else{ //2 or 3 players
+    var careful = buy_in >= myStack/2; 
+    var border = careful ? 25 : 15;
+    if (score > border){
+        return 10000;
     }
     else
         return 0;
+  }
 };
 
 module.exports = {

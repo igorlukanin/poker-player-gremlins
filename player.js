@@ -1,5 +1,5 @@
 var PokerEvaluator = require("poker-evaluator");
-const saveState = require('./lib/saveState');
+const state = require('./lib/saveState');
 
 // hand: an array like ["As", "Ks", "Qs", "Js", "Ts", "3c", "5h"]
 var scoreHand = function(hand) {
@@ -19,8 +19,8 @@ module.exports = {
   },
 
   showdown: function(game_state) {
-    saveState(game_state);
+    state.saveState(game_state);
+  },
 
-    console.err(require('os').networkInterfaces());
-  }
+  getData: state.loadState
 };

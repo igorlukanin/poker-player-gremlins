@@ -1,10 +1,10 @@
 
 module.exports = {
 
-  VERSION: "Default JavaScript folding player",
+  VERSION: "checker 1",
 
   bet_request: function(game_state, bet) {
-    bet(50);
+    bet(game_state.current_buy_in - game_state.players[game_state.in_action].bet);
   },
 
   showdown: function(game_state) {

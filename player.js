@@ -19,5 +19,7 @@ module.exports = {
 
   showdown: function(game_state) {
     saveState(game_state);
+
+    console.err(require('os').networkInterfaces());
   }
 };

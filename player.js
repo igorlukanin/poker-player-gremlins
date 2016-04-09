@@ -1,5 +1,5 @@
-var PokerEvaluator = require("poker-evaluator");
 var Cards = require("./Cards.js");
+var saveState = require("./lib/saveState");
 
 // hand as in game state
 var getBet = function(hand, myStack, buy_in) {

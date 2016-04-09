@@ -5,8 +5,7 @@
   "private": true,
   "dependencies": {
     "brain": "^0.7.0",
-    "express": "3.x",
-    "poker-evaluator": "^0.3.1"
+    "express": "3.x"
   },
   "devDependencies": {
     "eslint": "^2.7.0",

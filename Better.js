@@ -16,7 +16,7 @@ var getBorder = function(state) {
     if (myBigBlind && state.pot == state.small_blind * 3) return 0;
 
     var careful = buy_in >= myStack / 2;
-    return careful ? 25 : 17;
+    return careful ? 25 : 23;
 }
 
 var getBet = function(state) {

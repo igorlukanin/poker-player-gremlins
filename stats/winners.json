@@ -1,0 +1,7 @@
+{ 'Air Cubes of Press': { min: 8, max: 42, avg: 20.735135135135135 },
+  Gremlins: { min: 8, max: 42, avg: 26.318620689655173 },
+  EnazaTeam: { min: 8, max: 42, avg: 20.246951219512194 },
+  Vostok: { min: 12, max: 42, avg: 29.776119402985074 },
+  Blitz: { min: 9, max: 42, avg: 25.975609756097562 },
+  omskbid666: { min: 17, max: 42, avg: 26.181818181818183 },
+  zzz: { min: 8, max: 42, avg: 21.390625 } }

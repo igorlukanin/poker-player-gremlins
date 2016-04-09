@@ -9,9 +9,11 @@
     "poker-evaluator": "^0.3.1"
   },
   "devDependencies": {
+    "eslint": "^2.7.0",
     "mocha": "^2.4.5"
   },
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "lint": "eslint lib/* player.js"
   }
 }
